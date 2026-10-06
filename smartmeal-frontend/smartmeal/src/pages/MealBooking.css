@@ -1,0 +1,316 @@
+.meal-booking-page {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.meal-booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.meal-booking-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.meal-booking-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.meal-booking-refresh-btn {
+  border: none;
+  background-color: #1f2937;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meal-booking-refresh-btn:hover {
+  background-color: #111827;
+}
+
+/* Error */
+
+.meal-booking-error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 13px 16px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Cards */
+
+.meal-booking-form-card,
+.meal-booking-table-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.meal-booking-card-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.meal-booking-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.meal-booking-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Form */
+
+.meal-booking-form-card form {
+  padding: 24px;
+}
+
+.meal-booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.meal-booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.meal-booking-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.meal-booking-field input,
+.meal-booking-field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.meal-booking-field input:focus,
+.meal-booking-field select:focus {
+  border-color: #4b5563;
+  box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.1);
+}
+
+.meal-booking-field input::placeholder {
+  color: #9ca3af;
+}
+
+.meal-booking-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.meal-booking-primary-btn,
+.meal-booking-secondary-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meal-booking-primary-btn {
+  background-color: #1f2937;
+  color: white;
+}
+
+.meal-booking-primary-btn:hover {
+  background-color: #111827;
+}
+
+.meal-booking-primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.meal-booking-secondary-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.meal-booking-secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* Table */
+
+.meal-booking-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.meal-booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.meal-booking-table th {
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.meal-booking-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.meal-booking-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.meal-booking-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status */
+
+.meal-booking-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.meal-booking-status-booked {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.meal-booking-status-cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+
+.meal-booking-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.meal-booking-edit-btn,
+.meal-booking-delete-btn {
+  border: none;
+  padding: 7px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meal-booking-edit-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.meal-booking-edit-btn:hover {
+  background-color: #d1d5db;
+}
+
+.meal-booking-delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.meal-booking-delete-btn:hover {
+  background-color: #fecaca;
+}
+
+/* Loading / Empty */
+
+.meal-booking-state {
+  padding: 50px 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .meal-booking-page {
+    padding: 24px;
+  }
+
+  .meal-booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .meal-booking-page {
+    padding: 18px;
+  }
+
+  .meal-booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meal-booking-refresh-btn {
+    width: 100%;
+  }
+
+  .meal-booking-form-card form {
+    padding: 18px;
+  }
+
+  .meal-booking-card-header {
+    padding: 18px;
+  }
+
+  .meal-booking-form-actions {
+    flex-direction: column;
+  }
+
+  .meal-booking-primary-btn,
+  .meal-booking-secondary-btn {
+    width: 100%;
+  }
+}

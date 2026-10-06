@@ -1,0 +1,315 @@
+.users-page {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.users-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.users-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.users-refresh-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #222;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.users-refresh-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Error */
+
+.users-error {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+/* Cards */
+
+.users-form-card,
+.users-table-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.users-form-card {
+  padding: 25px;
+}
+
+.users-table-card {
+  padding: 0;
+}
+
+.users-card-header {
+  padding: 22px 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.users-form-card .users-card-header {
+  padding: 0 0 20px;
+}
+
+.users-card-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.users-card-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Form */
+
+.users-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.users-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.users-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.users-field input,
+.users-field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.users-field input:focus,
+.users-field select:focus {
+  border-color: #6b7280;
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.1);
+}
+
+.users-field input::placeholder {
+  color: #9ca3af;
+}
+
+/* Form buttons */
+
+.users-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.users-primary-btn,
+.users-secondary-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.users-primary-btn {
+  background: #1f2937;
+  color: white;
+}
+
+.users-primary-btn:hover {
+  background: #111827;
+}
+
+.users-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.users-secondary-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.users-secondary-btn:hover {
+  background: #d1d5db;
+}
+
+/* Table */
+
+.users-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.users-table th {
+  background: #f9fafb;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.users-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.users-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Role */
+
+.user-role {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.user-role-admin {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.user-role-user {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.user-role-resident {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* Actions */
+
+.user-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.user-edit-btn,
+.user-delete-btn {
+  border: none;
+  padding: 7px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.user-edit-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.user-edit-btn:hover {
+  background: #e5e7eb;
+}
+
+.user-delete-btn {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.user-delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* Loading / Empty */
+
+.users-state {
+  padding: 50px 25px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .users-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .users-page {
+    padding: 20px;
+  }
+
+  .users-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .users-header h1 {
+    font-size: 25px;
+  }
+
+  .users-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .users-form-card {
+    padding: 20px;
+  }
+
+  .users-card-header {
+    padding: 18px 20px;
+  }
+}

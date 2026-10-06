@@ -1,0 +1,316 @@
+.meal-attendance-page {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.meal-attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.meal-attendance-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.meal-attendance-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.meal-attendance-refresh-btn {
+  border: none;
+  background-color: #1f2937;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meal-attendance-refresh-btn:hover {
+  background-color: #111827;
+}
+
+/* Error */
+
+.meal-attendance-error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 13px 16px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Cards */
+
+.meal-attendance-form-card,
+.meal-attendance-table-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.meal-attendance-card-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.meal-attendance-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.meal-attendance-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Form */
+
+.meal-attendance-form-card form {
+  padding: 24px;
+}
+
+.meal-attendance-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.meal-attendance-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.meal-attendance-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.meal-attendance-field input,
+.meal-attendance-field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.meal-attendance-field input:focus,
+.meal-attendance-field select:focus {
+  border-color: #4b5563;
+  box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.1);
+}
+
+.meal-attendance-field input::placeholder {
+  color: #9ca3af;
+}
+
+.meal-attendance-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.meal-attendance-primary-btn,
+.meal-attendance-secondary-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meal-attendance-primary-btn {
+  background-color: #1f2937;
+  color: white;
+}
+
+.meal-attendance-primary-btn:hover {
+  background-color: #111827;
+}
+
+.meal-attendance-primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.meal-attendance-secondary-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.meal-attendance-secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* Table */
+
+.meal-attendance-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.meal-attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.meal-attendance-table th {
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.meal-attendance-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.meal-attendance-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.meal-attendance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status */
+
+.meal-attendance-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.meal-attendance-status-served {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.meal-attendance-status-absent {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+
+.meal-attendance-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.meal-attendance-edit-btn,
+.meal-attendance-delete-btn {
+  border: none;
+  padding: 7px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meal-attendance-edit-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.meal-attendance-edit-btn:hover {
+  background-color: #d1d5db;
+}
+
+.meal-attendance-delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.meal-attendance-delete-btn:hover {
+  background-color: #fecaca;
+}
+
+/* Loading / Empty */
+
+.meal-attendance-state {
+  padding: 50px 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .meal-attendance-page {
+    padding: 24px;
+  }
+
+  .meal-attendance-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .meal-attendance-page {
+    padding: 18px;
+  }
+
+  .meal-attendance-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meal-attendance-refresh-btn {
+    width: 100%;
+  }
+
+  .meal-attendance-form-card form {
+    padding: 18px;
+  }
+
+  .meal-attendance-card-header {
+    padding: 18px;
+  }
+
+  .meal-attendance-form-actions {
+    flex-direction: column;
+  }
+
+  .meal-attendance-primary-btn,
+  .meal-attendance-secondary-btn {
+    width: 100%;
+  }
+}

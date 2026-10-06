@@ -1,0 +1,310 @@
+.residents-page {
+  padding: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.residents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.residents-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.residents-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.residents-refresh-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #222;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.residents-refresh-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Error */
+
+.residents-error {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+/* Cards */
+
+.residents-form-card,
+.residents-table-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.residents-form-card {
+  padding: 25px;
+}
+
+.residents-table-card {
+  padding: 0;
+}
+
+.residents-card-header {
+  padding: 22px 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.residents-form-card .residents-card-header {
+  padding: 0 0 20px;
+}
+
+.residents-card-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.residents-card-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Form */
+
+.residents-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.residents-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.residents-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.residents-field input,
+.residents-field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.residents-field input:focus,
+.residents-field select:focus {
+  border-color: #6b7280;
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.1);
+}
+
+.residents-field input::placeholder {
+  color: #9ca3af;
+}
+
+/* Form Buttons */
+
+.residents-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.residents-primary-btn,
+.residents-secondary-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.residents-primary-btn {
+  background: #1f2937;
+  color: white;
+}
+
+.residents-primary-btn:hover {
+  background: #111827;
+}
+
+.residents-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.residents-secondary-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.residents-secondary-btn:hover {
+  background: #d1d5db;
+}
+
+/* Table */
+
+.residents-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.residents-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1050px;
+}
+
+.residents-table th {
+  background: #f9fafb;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.residents-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.residents-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.residents-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status */
+
+.resident-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.resident-status-active {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.resident-status-inactive {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Actions */
+
+.resident-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.resident-edit-btn,
+.resident-delete-btn {
+  border: none;
+  padding: 7px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resident-edit-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.resident-edit-btn:hover {
+  background: #e5e7eb;
+}
+
+.resident-delete-btn {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.resident-delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* Loading / Empty */
+
+.residents-state {
+  padding: 50px 25px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .residents-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .residents-page {
+    padding: 20px;
+  }
+
+  .residents-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .residents-header h1 {
+    font-size: 25px;
+  }
+
+  .residents-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .residents-form-card {
+    padding: 20px;
+  }
+
+  .residents-card-header {
+    padding: 18px 20px;
+  }
+}
