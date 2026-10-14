@@ -23,7 +23,7 @@ function Feedback() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API_URL}/feedback`);
       setFeedbackList(response.data);
     } catch (err) {
       console.error(err);

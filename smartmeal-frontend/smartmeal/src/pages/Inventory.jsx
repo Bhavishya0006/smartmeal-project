@@ -24,7 +24,7 @@ function Inventory() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API_URL}/inventory`);
       setInventory(response.data);
     } catch (err) {
       console.error(err);

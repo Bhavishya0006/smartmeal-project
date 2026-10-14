@@ -23,7 +23,7 @@ function Menu() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API_URL}/menus`);
       setMenus(response.data);
     } catch (err) {
       console.error(err);
