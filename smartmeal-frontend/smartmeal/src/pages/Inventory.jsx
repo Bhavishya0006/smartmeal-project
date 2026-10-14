@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Inventory.css";
 
-const API_URL = "https://smartmeal-project.onrender.com/inventory";
+import API_URL from "../api";
 
 function Inventory() {
   const [inventory, setInventory] = useState([]);

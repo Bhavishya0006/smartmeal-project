@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import API_URL from "./api";
 
 function Login() {
   const navigate = useNavigate();
@@ -25,13 +26,15 @@ function Login() {
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        "https://smartmeal-project.onrender.com/login",
-        {
-          username: username,
-          password: password,
-        }
-      );
+      
+const response = await axios.post(
+  `${API_URL}/login`,
+  {
+    username: username,
+    password: password,
+  }
+);
+
 
       const user = response.data;
 

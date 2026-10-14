@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./MealAttendance.css";
 
-const API_URL = "https://smartmeal-project.onrender.com/meal-attendance";
+import API_URL from "../api";
 
 function MealAttendance() {
   const [attendance, setAttendance] = useState([]);

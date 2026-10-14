@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Resident.css";
+import API_URL from "./api";
 
-const API = "https://smartmeal-project.onrender.com";
+const API = API_URL;
 
 function Resident() {
   const navigate = useNavigate();

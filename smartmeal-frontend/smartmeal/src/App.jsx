@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link, NavLink, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "./api";
 
 import Cook from "./Cook";
 import Resident from "./Resident";
@@ -73,16 +74,16 @@ function Dashboard() {
         feedbackResponse
       ] = await Promise.all([
 
-        axios.get("https://smartmeal-project.onrender.com/residents"),
-        axios.get("https://smartmeal-project.onrender.com/rooms"),
-        axios.get("https://smartmeal-project.onrender.com/menus"),
-        axios.get("https://smartmeal-project.onrender.com/inventory"),
-        axios.get("https://smartmeal-project.onrender.com/food-waste"),
-        axios.get("https://smartmeal-project.onrender.com/meal-attendance"),
-        axios.get("https://smartmeal-project.onrender.com/meal-bookings"),
-        axios.get("https://smartmeal-project.onrender.com/feedback")
-
-      ]);
+        
+axios.get(`${API_URL}/residents`),
+axios.get(`${API_URL}/rooms`),
+axios.get(`${API_URL}/menus`),
+axios.get(`${API_URL}/inventory`),
+axios.get(`${API_URL}/food-waste`),
+axios.get(`${API_URL}/meal-attendance`),
+axios.get(`${API_URL}/meal-bookings`),
+axios.get(`${API_URL}/feedback`)
+  ]);
 
       setResidents(residentsResponse.data);
       setRooms(roomsResponse.data);

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "./api";
 import { useNavigate } from "react-router-dom";
 import "./Cook.css";
 
-const API = "https://smartmeal-project.onrender.com";
-
+const API = API_URL;
 function Cook() {
   const navigate = useNavigate();
 
@@ -77,11 +77,11 @@ function Cook() {
         wasteResponse,
         inventoryResponse,
       ] = await Promise.all([
-        axios.get(`${API}/menus`),
-        axios.get(`${API}/meal-bookings`),
-        axios.get(`${API}/meal-attendance`),
-        axios.get(`${API}/food-waste`),
-        axios.get(`${API}/inventory`),
+       axios.get(`${API}/menus`),
+axios.get(`${API}/meal-bookings`),
+axios.get(`${API}/meal-attendance`),
+axios.get(`${API}/food-waste`),
+axios.get(`${API}/inventory`),
       ]);
 
       setMenus(menuResponse.data);
