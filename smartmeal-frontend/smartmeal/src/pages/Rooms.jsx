@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Rooms.css";
 
-const API_URL = "http://localhost:8080/rooms";
+const API_URL = "https://smartmeal-project.onrender.com/rooms";
 
 function Rooms() {
   const [rooms, setRooms] = useState([]);

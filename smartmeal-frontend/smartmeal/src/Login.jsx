@@ -26,7 +26,7 @@ function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/login",
+        "https://smartmeal-project.onrender.com/login",
         {
           username: username,
           password: password,

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./FoodWaste.css";
 
-const API_URL = "http://localhost:8080/food-waste";
+const API_URL = "https://smartmeal-project.onrender.com/food-waste";
 
 function FoodWaste() {
   const [foodWaste, setFoodWaste] = useState([]);

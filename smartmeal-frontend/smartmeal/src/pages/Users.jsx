@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Users.css";
 
-const API_URL = "http://localhost:8080/users";
+const API_URL = "https://smartmeal-project.onrender.com/users";
 
 function Users() {
   const [users, setUsers] = useState([]);

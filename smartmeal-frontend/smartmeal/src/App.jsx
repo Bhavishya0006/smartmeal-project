@@ -73,14 +73,14 @@ function Dashboard() {
         feedbackResponse
       ] = await Promise.all([
 
-        axios.get("http://localhost:8080/residents"),
-        axios.get("http://localhost:8080/rooms"),
-        axios.get("http://localhost:8080/menus"),
-        axios.get("http://localhost:8080/inventory"),
-        axios.get("http://localhost:8080/food-waste"),
-        axios.get("http://localhost:8080/meal-attendance"),
-        axios.get("http://localhost:8080/meal-bookings"),
-        axios.get("http://localhost:8080/feedback")
+        axios.get("https://smartmeal-project.onrender.com/residents"),
+        axios.get("https://smartmeal-project.onrender.com/rooms"),
+        axios.get("https://smartmeal-project.onrender.com/menus"),
+        axios.get("https://smartmeal-project.onrender.com/inventory"),
+        axios.get("https://smartmeal-project.onrender.com/food-waste"),
+        axios.get("https://smartmeal-project.onrender.com/meal-attendance"),
+        axios.get("https://smartmeal-project.onrender.com/meal-bookings"),
+        axios.get("https://smartmeal-project.onrender.com/feedback")
 
       ]);
 

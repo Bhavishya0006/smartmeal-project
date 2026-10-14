@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Feedback.css";
 
-const API_URL = "http://localhost:8080/feedback";
+const API_URL = "https://smartmeal-project.onrender.com/feedback";
 
 function Feedback() {
   const [feedbackList, setFeedbackList] = useState([]);

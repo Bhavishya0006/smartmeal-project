@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Menu.css";
 
-const API_URL = "http://localhost:8080/menus";
+const API_URL = "https://smartmeal-project.onrender.com/menus";
 
 function Menu() {
   const [menus, setMenus] = useState([]);

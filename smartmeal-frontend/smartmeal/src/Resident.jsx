@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Resident.css";
 
-const API = "http://localhost:8080";
+const API = "https://smartmeal-project.onrender.com";
 
 function Resident() {
   const navigate = useNavigate();
