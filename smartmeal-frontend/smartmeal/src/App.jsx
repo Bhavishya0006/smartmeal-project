@@ -437,98 +437,119 @@ function App() {
 
       <div className="app">
 
-        <aside className="sidebar">
+        
+<aside className="sidebar">
+  <h2>SmartMeal</h2>
 
-          <h2>SmartMeal</h2>
+  <nav>
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Dashboard
+    </NavLink>
 
-          <nav>
-            <div className="sidebar-user">
-  <div className="sidebar-user-name">
-    Admin
+    <NavLink
+      to="/residents"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Residents
+    </NavLink>
+
+    <NavLink
+      to="/users"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Users
+    </NavLink>
+
+    <NavLink
+      to="/rooms"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Rooms
+    </NavLink>
+
+    <NavLink
+      to="/menu"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Menu
+    </NavLink>
+
+    <NavLink
+      to="/inventory"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Inventory
+    </NavLink>
+
+    <NavLink
+      to="/food-waste"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Food Waste
+    </NavLink>
+
+    <NavLink
+      to="/meal-attendance"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Meal Attendance
+    </NavLink>
+
+    <NavLink
+      to="/meal-bookings"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Meal Bookings
+    </NavLink>
+
+    <NavLink
+      to="/feedback"
+      className={({ isActive }) =>
+        isActive ? "active-link" : ""
+      }
+    >
+      Feedback
+    </NavLink>
+  </nav>
+
+  <div className="sidebar-user">
+    <div className="sidebar-user-name">
+    
+    </div>
+
+    <button
+      className="logout-button"
+      onClick={() => {
+        localStorage.removeItem("smartmealUser");
+        window.location.href = "/login";
+      }}
+    >
+      Logout
+    </button>
   </div>
+</aside>
 
-  <button
-    className="logout-button"
-    onClick={() => {
-      localStorage.removeItem("smartmealUser");
-      window.location.href = "/login";
-    }}
-  >
-    Logout
-  </button>
-</div>
-  <NavLink
-    to="/"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Dashboard
-  </NavLink>
-
-  <NavLink
-    to="/residents"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Residents
-  </NavLink>
-
-  <NavLink
-    to="/users"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Users
-  </NavLink>
-
-  <NavLink
-    to="/rooms"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Rooms
-  </NavLink>
-
-  <NavLink
-    to="/menu"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Menu
-  </NavLink>
-
-  <NavLink
-    to="/inventory"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Inventory
-  </NavLink>
-
-  <NavLink
-    to="/food-waste"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Food Waste
-  </NavLink>
-
-  <NavLink
-    to="/meal-attendance"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Meal Attendance
-  </NavLink>
-
-  <NavLink
-    to="/meal-bookings"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Meal Bookings
-  </NavLink>
-
-  <NavLink
-    to="/feedback"
-    className={({ isActive }) => isActive ? "active-link" : ""}
-  >
-    Feedback
-  </NavLink>
-</nav>
-
-        </aside>
 
 
         <main className="main-content">

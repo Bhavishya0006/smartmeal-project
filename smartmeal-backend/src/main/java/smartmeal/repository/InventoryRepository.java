@@ -5,3 +5,4 @@ import smartmeal.entity.Inventory;
 
 public interface InventoryRepository extends JpaRepository<Inventory, Long> {
 }
+
