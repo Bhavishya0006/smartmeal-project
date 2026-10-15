@@ -67,9 +67,9 @@ function MealAttendance() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/meal-attendance/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/meal-attendance`, data);
       }
 
       await fetchAttendance();
@@ -112,7 +112,7 @@ function MealAttendance() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/meal-attendance/${id}`);
 
       await fetchAttendance();
 

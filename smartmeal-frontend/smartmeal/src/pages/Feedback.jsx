@@ -73,9 +73,9 @@ function Feedback() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/feedback/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/feedback`, data);
       }
 
       await fetchFeedback();
@@ -121,7 +121,7 @@ function Feedback() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/feedback/${id}`);
 
       await fetchFeedback();
 

@@ -76,9 +76,9 @@ function FoodWaste() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/food-waste/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/food-waste`, data);
       }
 
       await fetchFoodWaste();
@@ -124,7 +124,7 @@ function FoodWaste() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/food-waste/${id}`);
 
       await fetchFoodWaste();
 

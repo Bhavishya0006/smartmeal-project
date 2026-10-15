@@ -73,9 +73,9 @@ function Inventory() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/inventory/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/inventory`, data);
       }
 
       await fetchInventory();
@@ -120,7 +120,7 @@ function Inventory() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/inventory/${id}`);
 
       await fetchInventory();
 

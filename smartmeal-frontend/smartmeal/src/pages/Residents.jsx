@@ -81,11 +81,11 @@ function Residents() {
         status: formData.status,
       };
 
-      if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
-      } else {
-        await axios.post(API_URL, data);
-      }
+     if (editingId) {
+  await axios.put(`${API_URL}/residents/${editingId}`, data);
+} else {
+  await axios.post(`${API_URL}/residents`, data);
+}
 
       await fetchResidents();
       resetForm();
@@ -131,7 +131,7 @@ function Residents() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/residents/${id}`);
 
       await fetchResidents();
 

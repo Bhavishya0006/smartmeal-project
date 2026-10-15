@@ -73,9 +73,9 @@ function Rooms() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/rooms/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/rooms`, data);
       }
 
       await fetchRooms();
@@ -120,7 +120,7 @@ function Rooms() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/rooms/${id}`);
 
       await fetchRooms();
 

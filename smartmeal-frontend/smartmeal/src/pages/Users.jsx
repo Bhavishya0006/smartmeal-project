@@ -70,9 +70,9 @@ function Users() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/users/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+        await axios.post(`${API_URL}/users`, data);
       }
 
       await fetchUsers();
@@ -116,7 +116,7 @@ function Users() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/users/${id}`);
 
       await fetchUsers();
 

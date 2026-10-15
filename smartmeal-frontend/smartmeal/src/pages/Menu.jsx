@@ -23,7 +23,7 @@ function Menu() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(`${API_URL}/menus`);
+      const response = await axios.get(`${API_URL}/menu`);
       setMenus(response.data);
     } catch (err) {
       console.error(err);
@@ -70,9 +70,9 @@ function Menu() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, data);
+        await axios.put(`${API_URL}/menu/${editingId}`, data);
       } else {
-        await axios.post(API_URL, data);
+       await axios.post(`${API_URL}/menu`, data);
       }
 
       await fetchMenus();
@@ -116,7 +116,7 @@ function Menu() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/${id}`);
+      await axios.delete(`${API_URL}/menu/${id}`);
 
       await fetchMenus();
 
