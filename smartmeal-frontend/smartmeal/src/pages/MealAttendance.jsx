@@ -24,10 +24,21 @@ function MealAttendance() {
 
       const response = await axios.get(`${API_URL}/meal-attendance`);
       setAttendance(response.data);
-    } catch (err) {
-      console.error(err);
-      setError("Unable to load meal attendance records.");
-    } finally {
+   } catch (err) {
+  console.error("Meal Attendance Error:", err);
+  console.error("Request URL:", `${API_URL}/meal-attendance`);
+  console.error("Status Code:", err.response?.status);
+  console.error("Response Data:", err.response?.data);
+
+  setError(
+    `Unable to load attendance. ${
+      err.response?.status
+        ? `Status: ${err.response.status}`
+        : "Network or connection error."
+    }`
+  );
+}
+    finally {
       setLoading(false);
     }
   };
