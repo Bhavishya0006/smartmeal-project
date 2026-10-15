@@ -10,13 +10,14 @@ function Users() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
-    role: "USER",
+    role: "COOK",
   });
 
   const [editingId, setEditingId] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const fetchUsers = async () => {
     try {
@@ -187,25 +188,38 @@ function Users() {
               />
             </div>
 
-            <div className="users-field">
-              <label htmlFor="password">
-                {editingId ? "New Password" : "Password"}
-              </label>
+            ```jsx
+<div className="users-field">
+  <label htmlFor="password">
+    {editingId ? "New Password" : "Password"}
+  </label>
 
-              <input
-                id="password"
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder={
-                  editingId
-                    ? "Enter new password"
-                    : "Enter password"
-                }
-                required={!editingId}
-              />
-            </div>
+  <div className="password-input-wrapper">
+    <input
+      id="password"
+      type={showPassword ? "text" : "password"}
+      name="password"
+      value={formData.password}
+      onChange={handleChange}
+      placeholder={
+        editingId
+          ? "Enter new password"
+          : "Enter password"
+      }
+      required={!editingId}
+    />
+
+    <button
+      type="button"
+      className="password-toggle"
+      onClick={() => setShowPassword(!showPassword)}
+      aria-label={showPassword ? "Hide password" : "Show password"}
+    >
+      {showPassword ? "🙈" : "👁"}
+    </button>
+  </div>
+</div>
+```
 
             <div className="users-field">
               <label htmlFor="role">Role</label>
@@ -217,7 +231,7 @@ function Users() {
                 onChange={handleChange}
               >
                 <option value="ADMIN">ADMIN</option>
-                <option value="USER">COOK</option>
+                <option value="COOK">COOK</option>
                 <option value="RESIDENT">RESIDENT</option>
               </select>
             </div>

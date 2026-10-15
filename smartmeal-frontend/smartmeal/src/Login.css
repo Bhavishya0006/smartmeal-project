@@ -333,3 +333,35 @@
     padding: 11px;
   }
 }
+```css
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+  box-sizing: border-box;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  line-height: 1;
+}
+
+.password-toggle:focus {
+  outline: 2px solid #2563eb;
+  border-radius: 4px;
+}
+```

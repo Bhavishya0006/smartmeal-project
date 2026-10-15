@@ -12,6 +12,7 @@ function Login() {
   const [selectedRole, setSelectedRole] = useState("RESIDENT");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -190,17 +191,30 @@ const response = await axios.post(
                 />
               </div>
 
-              <div className="input-group">
-                <label htmlFor="password">Password</label>
+             ```jsx
+<div className="input-group">
+  <label htmlFor="password">Password</label>
 
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Enter your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
+  <div className="password-input-wrapper">
+    <input
+      id="password"
+      type={showPassword ? "text" : "password"}
+      placeholder="Enter your password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+    />
+
+    <button
+      type="button"
+      className="password-toggle"
+      onClick={() => setShowPassword(!showPassword)}
+      aria-label={showPassword ? "Hide password" : "Show password"}
+    >
+      {showPassword ? "🙈" : "👁"}
+    </button>
+  </div>
+</div>
+```
 
               {error && (
                 <div className="login-error">
