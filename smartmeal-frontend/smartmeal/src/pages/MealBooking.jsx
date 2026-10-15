@@ -23,7 +23,7 @@ function MealBooking() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(`${API_URL}/meal-boooking`);
+      const response = await axios.get(`${API_URL}/meal-boookings`);
       setBookings(response.data);
     } catch (err) {
       console.error(err);
@@ -70,9 +70,9 @@ function MealBooking() {
       };
 
       if (editingId) {
-        await axios.put(`${API_URL}/meal-booking/${editingId}`, data);
+        await axios.put(`${API_URL}/meal-bookings/${editingId}`, data);
       } else {
-        await axios.post(`${API_URL}/meal-booking`, data);
+        await axios.post(`${API_URL}/meal-bookings`, data);
       }
 
       await fetchBookings();
@@ -116,7 +116,7 @@ function MealBooking() {
     try {
       setError("");
 
-      await axios.delete(`${API_URL}/meal-booking/${id}`);
+      await axios.delete(`${API_URL}/meal-bookings/${id}`);
 
       await fetchBookings();
 
