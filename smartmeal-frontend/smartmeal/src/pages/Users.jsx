@@ -51,10 +51,11 @@ function Users() {
     setFormData({
       username: "",
       password: "",
-      role: "USER",
+      role: "COOK",
     });
 
     setEditingId(null);
+    setShowPassword(false);
   };
 
   const handleSubmit = async (event) => {
@@ -96,7 +97,7 @@ function Users() {
     setFormData({
       username: user.username ?? "",
       password: "",
-      role: user.role ?? "USER",
+      role: user.role ?? "COOK",
     });
 
     window.scrollTo({
@@ -187,8 +188,6 @@ function Users() {
                 required
               />
             </div>
-
-            ```jsx
 <div className="users-field">
   <label htmlFor="password">
     {editingId ? "New Password" : "Password"}
@@ -212,14 +211,13 @@ function Users() {
     <button
       type="button"
       className="password-toggle"
-      onClick={() => setShowPassword(!showPassword)}
+      onClick={() => setShowPassword((previous) => !previous)}
       aria-label={showPassword ? "Hide password" : "Show password"}
     >
       {showPassword ? "🙈" : "👁"}
     </button>
   </div>
 </div>
-```
 
             <div className="users-field">
               <label htmlFor="role">Role</label>

@@ -191,7 +191,7 @@ const response = await axios.post(
                 />
               </div>
 
-             ```jsx
+            
 <div className="input-group">
   <label htmlFor="password">Password</label>
 
@@ -207,15 +207,13 @@ const response = await axios.post(
     <button
       type="button"
       className="password-toggle"
-      onClick={() => setShowPassword(!showPassword)}
+      onClick={() => setShowPassword((previous) => !previous)}
       aria-label={showPassword ? "Hide password" : "Show password"}
     >
       {showPassword ? "🙈" : "👁"}
     </button>
   </div>
 </div>
-```
-
               {error && (
                 <div className="login-error">
                   {error}

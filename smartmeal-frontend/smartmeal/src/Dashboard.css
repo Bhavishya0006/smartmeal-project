@@ -45,7 +45,6 @@
   background-color: #374151;
   border-color: #374151;
 }
-```
 
 /* Statistics */
 
@@ -262,4 +261,22 @@
     flex-direction: column;
     gap: 5px;
   }
+}
+/* Admin Dashboard Refresh Button */
+.dashboard-header .dashboard-refresh {
+  background: #1f2937 !important;
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  border: 1px solid #1f2937 !important;
+  padding: 10px 22px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-header .dashboard-refresh:hover {
+  background: #374151 !important;
+  background-color: #374151 !important;
+  color: #ffffff !important;
 }

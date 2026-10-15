@@ -333,7 +333,6 @@
     padding: 11px;
   }
 }
-```css
 .password-input-wrapper {
   position: relative;
   display: flex;
@@ -347,16 +346,19 @@
   box-sizing: border-box;
 }
 
-.password-toggle {
+.password-input-wrapper .password-toggle {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  width: auto;
+  margin: 0;
+  padding: 5px;
   border: none;
   background: transparent;
+  color: #1f2937;
   cursor: pointer;
   font-size: 18px;
-  padding: 5px;
   line-height: 1;
 }
 
@@ -364,4 +366,3 @@
   outline: 2px solid #2563eb;
   border-radius: 4px;
 }
-```

@@ -313,7 +313,6 @@
     padding: 18px 20px;
   }
 }
-```css
 .password-input-wrapper {
   position: relative;
   display: flex;
@@ -339,4 +338,3 @@
   padding: 5px;
   line-height: 1;
 }
-```
