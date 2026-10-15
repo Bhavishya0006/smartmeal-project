@@ -19,20 +19,25 @@ function MealBooking() {
   const [error, setError] = useState("");
 
   const fetchBookings = async () => {
-    try {
-      setLoading(true);
-      setError("");
+  try {
+    setLoading(true);
+    setError("");
 
-      const response = await axios.get(`${API_URL}/meal-boookings`);
-      setBookings(response.data);
-    } catch (err) {
-      console.error(err);
-      setError("Unable to load meal booking records.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    const response = await axios.get(`${API_URL}/meal-bookings`);
+    setBookings(response.data);
+  } catch (err) {
+    console.error("Meal Booking Error:", err);
+    console.error("Status:", err.response?.status);
+    console.error("Response:", err.response?.data);
 
+    setError(
+      err.response?.data?.message ||
+        "Unable to load meal booking records."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
   useEffect(() => {
     fetchBookings();
   }, []);
